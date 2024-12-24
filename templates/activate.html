@@ -1,0 +1,8 @@
+{% autoescape off %}  {# Disable autoescaping for the content within this block #}
+
+Hi {{user.username}}  {# Greet the user by their username #}
+Please Click This Link below to verify your account  {# Prompt the user to verify their account #}
+
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}  {# Generate the activation link using the domain and URL parameters #}
+
+{% endautoescape %}  {# End of the autoescape block #}
